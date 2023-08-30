@@ -20,16 +20,16 @@ const Page = () => {
   };
 
   const blogData = [
-    { id: '1', link: 'https://picsum.photos/300/360', name: 'This is my first blog', para: 'waste track then surface fifth mood sale continent even single bill breathing case scene deer asleep strike motor made exclaimed hour particles salt book' },
-    { id: '2', link: 'https://picsum.photos/300/350', name: 'This is my second blog', para: 'tropical dozen introduced doing enjoy great feathers tent oil food capital western sharp spread themselves shirt underline writing across suggest your expect cabin hung' },
-    { id: '3', link: 'https://picsum.photos/300/340', name: 'This is my third blog', para: 'fat sharp situation introduced for river involved scientist quarter remarkable imagine beat telephone saved settlers mud scared stepped tiny gas radio sure color fallen' },
-    { id: '4', link: 'https://picsum.photos/300/370', name: 'This is my forth blog', para: 'ran recent making beyond border rush calm leave ground who eager stone rich advice clothes plate mother asleep log community human job neighbor beat' },
+    { id: '1', link: 'https://picsum.photos/1200/720', name: 'This is my first blog', para: 'waste track then surface fifth mood sale continent even single bill breathing case scene deer asleep strike motor made exclaimed hour particles salt book' },
+    { id: '2', link: 'https://picsum.photos/1200/721', name: 'This is my second blog', para: 'tropical dozen introduced doing enjoy great feathers tent oil food capital western sharp spread themselves shirt underline writing across suggest your expect cabin hung' },
+    { id: '3', link: 'https://picsum.photos/1200/722', name: 'This is my third blog', para: 'fat sharp situation introduced for river involved scientist quarter remarkable imagine beat telephone saved settlers mud scared stepped tiny gas radio sure color fallen' },
+    { id: '4', link: 'https://picsum.photos/1200/723', name: 'This is my forth blog', para: 'ran recent making beyond border rush calm leave ground who eager stone rich advice clothes plate mother asleep log community human job neighbor beat' },
   ];
 
   return (
     <>
       {/* MAIN CONTAINER */}
-      <div className={`w-full md:max-h-[120.5vh] min-h-full ${dark ? 'bg-slate-800 text-slate-200' : 'bg-slate-200 text-slate-800'} `}>
+      <div className={`w-full pb-5 md:max-h-[120.5vh] h-full ${dark ? 'bg-slate-800 text-slate-200' : 'bg-slate-200 text-slate-800'} `}>
 
         {/* MY HEADER */}
         <header className='h-[14vh]'>
@@ -52,10 +52,10 @@ const Page = () => {
             </div>
 
             {/* MOBILE VIEW */}
-            <ul className={`md:hidden absolute top-[77.8px] ${dark ? 'bg-slate-200 text-slate-800' : 'bg-slate-800 text-slate-200'}  p-2 backdrop-blur-md right-16 ${isOpen ? 'block' : 'hidden'}`}>
+            <ul className={`md:hidden absolute  top-[77.8px] ${dark ? 'bg-slate-200 text-slate-800' : 'bg-slate-800 text-slate-200'}  px-4 backdrop-blur-md right-16 ${isOpen ? 'block' : 'hidden'}`}>
               {
                 nav_item.map((item, id) => (
-                  <li key={id} className={`cursor-pointer capitalize text-center`}><Link href={'/'}>{item}</Link></li>
+                  <li key={id} className={`cursor-pointer capitalize text-center my-4`}><Link href={'/'}>{item}</Link></li>
                 ))
               }
 
@@ -65,22 +65,22 @@ const Page = () => {
         </header>
 
         {/* MY HERO SECTION */}
-        <main className={`w-full h-fit`}>
+        <main className={`w-full h-fit md:pb-4`}>
           {blogData.map((item, index) => (
             <div
-              className={`px-8 flex ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
+              className={`px-8 flex flex-col ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
                 } md:items-center md:gap-8 max-w-screen-xl m-auto md:my-24 my-20`}
               key={index.id}
             >
               {/* IMAGE */}
-              <div className="md:w-1/3 mx-3">
-                <Image src={item.link} width={400} height={500} alt="Blog Image" />
+              <div className="mx-auto md:w-1/4">
+                <Image src={item.link} width={600} height={700} alt="Blog Image" className='h-56 w-40 md:w-72 md:h-96'/>
               </div>
 
               {/* TEXT */}
-              <div className="md:w-2/3">
+              <div className="text-center md:w-2/3 ">
                 {/* Heading */}
-                <h1 className={`text-2xl md:text-4xl font-bold mb-4 ${index===0 && dark ?'md:text-gray-300':'md:text-gray-700'}`}>{item.name}</h1>
+                <h1 className={`text-2xl md:text-4xl font-bold my-4 ${index===0 && dark ?'md:text-gray-300':'md:text-gray-700'}`}>{item.name}</h1>
 
                 {/* Paragraph */}
                 <p className={`${dark?'text-gray-500':''} ${index===0 && dark ?'md:text-gray-400':'md:text-gray-600'}`}>{item.para}</p>
