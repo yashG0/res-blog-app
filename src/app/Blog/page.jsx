@@ -20,16 +20,16 @@ const Page = () => {
   };
 
   const blogData = [
-    { id: '1', link: 'https://picsum.photos/1200/720', name: 'This is my first blog', para: 'waste track then surface fifth mood sale continent even single bill breathing case scene deer asleep strike motor made exclaimed hour particles salt book' },
-    { id: '2', link: 'https://picsum.photos/1200/721', name: 'This is my second blog', para: 'tropical dozen introduced doing enjoy great feathers tent oil food capital western sharp spread themselves shirt underline writing across suggest your expect cabin hung' },
-    { id: '3', link: 'https://picsum.photos/1200/722', name: 'This is my third blog', para: 'fat sharp situation introduced for river involved scientist quarter remarkable imagine beat telephone saved settlers mud scared stepped tiny gas radio sure color fallen' },
-    { id: '4', link: 'https://picsum.photos/1200/723', name: 'This is my forth blog', para: 'ran recent making beyond border rush calm leave ground who eager stone rich advice clothes plate mother asleep log community human job neighbor beat' },
+    { id: '1', link: 'https://picsum.photos/1200/720', name: 'This is my first blog', para: '"Exploring the hidden gems of nature can truly be a transformative experience. The rustling leaves, the soothing babble of a nearby stream, and the gentle caress of a cool breeze all work in harmony to create an enchanting symphony for the senses. waste track then surface fifth mood sale continent even single bill breathing case scene deer asleep strike motor made exclaimed hour particles salt book' },
+    { id: '2', link: 'https://picsum.photos/1200/721', name: 'This is my second blog', para: 'tropical dozen introduced doing enjoy great feathers tent oil food capital western sharp spread themselves shirt underline writing across suggest your expect cabin hung As we venture deeper into the heart of the wilderness, we find ourselves disconnecting from the hustle and bustle of modern life. Every step unveils a new wonder – a vibrant wildflower,' },
+    { id: '3', link: 'https://picsum.photos/1200/722', name: 'This is my third blog', para: ' a curious critter peeking from the bushes, or the dappled sunlight creating playful patterns on the forest floor. In these moments, technology fades into the background,  fat sharp situation introduced for river involved scientist quarter remarkable imagine beat telephone saved settlers mud scared stepped tiny gas radio sure color fallen' },
+    { id: '4', link: 'https://picsum.photos/1200/723', name: 'This is my forth blog', para: 'ran recent making beyond border rush calm leave ground who eager stone rich advice clothes plate mother asleep log community human job neighbor beat allowing us to embrace the serenity of the natural world. Whether it s a spontaneous solo hike or a planned family camping trip, these forays into nature provide not just an escape', },
   ];
 
   return (
     <>
       {/* MAIN CONTAINER */}
-      <div className={`w-full pb-5 md:max-h-[120.5vh] h-full ${dark ? 'bg-slate-800 text-slate-200' : 'bg-slate-200 text-slate-800'} `}>
+      <div className={`w-full pb-5 md:max-h-[106.5vh] h-full ${dark ? 'bg-slate-800 text-slate-200' : 'bg-slate-200 text-slate-800'} `}>
 
         {/* MY HEADER */}
         <header className='h-[14vh]'>
@@ -52,7 +52,7 @@ const Page = () => {
             </div>
 
             {/* MOBILE VIEW */}
-            <ul className={`md:hidden absolute  top-[77.8px] ${dark ? 'bg-slate-200 text-slate-800' : 'bg-slate-800 text-slate-200'}  px-4 backdrop-blur-md right-16 ${isOpen ? 'block' : 'hidden'}`}>
+            <ul className={`z-10 md:hidden absolute  top-[77.8px] ${dark ? 'bg-slate-200 text-slate-800' : 'bg-slate-800 text-slate-200'}  px-4 backdrop-blur-md right-16 ${isOpen ? 'block' : 'hidden'}`}>
               {
                 nav_item.map((item, id) => (
                   <li key={id} className={`cursor-pointer capitalize text-center my-4`}><Link href={'/'}>{item}</Link></li>
@@ -74,7 +74,7 @@ const Page = () => {
             >
               {/* IMAGE */}
               <div className="mx-auto md:w-1/4">
-                <Image src={item.link} width={600} height={700} alt="Blog Image" className='h-56 w-40 md:w-72 md:h-96'/>
+                <Image src={item.link} width={600} height={700} alt="Blog Image" className='cursor-pointer h-56 w-40 md:w-72 md:h-96 shadow-lg rounded-lg shadow-gray-600 hover:scale-105 duration-300'/>
               </div>
 
               {/* TEXT */}
@@ -87,8 +87,6 @@ const Page = () => {
               </div>
             </div>
           ))}
-
-
         </main>
       </div>
     </>
