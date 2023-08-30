@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-const page = () => {
+const Page = () => {
 
   const nav_item = ['feature', 'use cases', 'blog', 'login'];
   const [dark, setDark] = useState(false)
@@ -96,4 +96,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
