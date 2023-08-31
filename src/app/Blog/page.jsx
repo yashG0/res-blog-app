@@ -34,7 +34,7 @@ const Page = () => {
         {/* MY HEADER */}
         <header className='h-[14vh]'>
           <nav className='max-w-full md:max-w-screen-xl h-full flex items-center justify-around m-auto'>
-            <div className='text-4xl font-medium'>LOGO</div>
+            <div className='text-3xl md:text-4xl font-medium'>YashBlog</div>
             <ul className='hidden md:flex items-center justify-center gap-6'>
               {
                 nav_item.map((item, id) => (
@@ -61,7 +61,7 @@ const Page = () => {
 
             </ul>
           </nav>
-          <button onClick={toggleDarkMode} className={`top-6 md:top-8 right-0 rounded-l-xl absolute px-3 py-1 ${dark ? 'text-slate-800 bg-slate-200' : 'text-slate-200 bg-slate-800'}`}>{dark ? 'L' : 'D'}</button>
+          <button onClick={toggleDarkMode} className={`top-[34.3px] md:top-8 right-0 rounded-l-xl absolute px-3 py-1 ${dark ? 'text-slate-800 bg-slate-200' : 'text-slate-200 bg-slate-800'}`}>{dark ? 'L' : 'D'}</button>
         </header>
 
         {/* MY HERO SECTION */}
@@ -83,7 +83,7 @@ const Page = () => {
                 <h1 className={`text-2xl md:text-4xl font-bold my-4 ${index===0 && dark ?'md:text-gray-300':'md:text-gray-700'}`}>{item.name}</h1>
 
                 {/* Paragraph */}
-                <p className={`block ${dark?'text-gray-500':''} ${index===0 && dark ?'md:text-gray-400':'md:text-gray-600'}`}>{item.para}</p>
+                <p className={`${dark?'text-gray-500':''} ${index===0 && dark ?'md:text-gray-400':'md:text-gray-600'}`}>{item.para}</p>
 
                 <p className={`hidden md:block ${dark?'text-gray-500':''} ${index===0 && dark ?'md:text-gray-400':'md:text-gray-600'}`}>{item.para}</p>
               </div>
