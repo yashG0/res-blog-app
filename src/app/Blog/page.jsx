@@ -19,6 +19,8 @@ const Page = () => {
     setIsOpen(!isOpen);
   };
 
+  const logo = "YashBlog";
+
   const blogData = [
     { id: '1', link: 'https://picsum.photos/1200/720', name: 'This is my first blog', para: '"Exploring the hidden gems of nature can truly be a transformative experience. The rustling leaves, the soothing babble of a nearby stream, and the gentle caress of a cool breeze all work ' },
     { id: '2', link: 'https://picsum.photos/1200/721', name: 'This is my second blog', para: 'tropical dozen introduced doing enjoy great feathers tent oil food capital western sharp spread themselves shirt underline writing across suggest your expect cabin ' },
@@ -34,7 +36,7 @@ const Page = () => {
         {/* MY HEADER */}
         <header className='h-[14vh]'>
           <nav className='max-w-full md:max-w-screen-xl h-full flex items-center justify-around m-auto'>
-            <div className='text-3xl md:text-4xl font-medium'>YashBlog</div>
+            <div className='text-3xl md:text-4xl font-medium'>{logo}</div>
             <ul className='hidden md:flex items-center justify-center gap-6'>
               {
                 nav_item.map((item, id) => (
